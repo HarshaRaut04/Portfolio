@@ -3,198 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Harsha Raut - Middleware Administrator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Harsha Raut - Middleware & DevOps Expert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f3f4f6;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
-    .particle-bg {
+    .hero-bg {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #256d85, #3ca0a8);
-      overflow: hidden;
+      background: linear-gradient(135deg, #1e3a8a, #60a5fa);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
       z-index: -1;
     }
     .particle {
       position: absolute;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.3);
       border-radius: 50%;
-      animation: float 15s infinite;
+      animation: float 12s infinite;
     }
     @keyframes float {
-      0% { transform: translateY(0); opacity: 0.5; }
-      50% { opacity: 0.8; }
-      100% { transform: translateY(-100vh); opacity: 0; }
+      0% { transform: translateY(0); opacity: 0.6; }
+      50% { opacity: 0.9; }
+      100% { transform: translateY(-120vh); opacity: 0; }
     }
-    .box {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
-    .box:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    .card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     }
     nav {
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     }
     nav.scrolled {
-      background-color: #1e5b70;
+      background-color: rgba(30, 64, 175, 0.95);
+      backdrop-filter: blur(8px);
     }
     .fade-in {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .section-divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      margin: 1rem auto;
+      border-radius: 2px;
+    }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-gray-900">
   <!-- Navigation -->
-  <nav class="bg-teal-600 sticky top-0 z-50 py-4 px-6 md:px-12 flex justify-between items-center">
+  <nav class="sticky top-0 z-50 py-4 px-6 md:px-16 flex justify-between items-center">
     <h1 class="text-2xl md:text-3xl font-bold text-white">Harsha Raut</h1>
     <ul class="flex flex-col md:flex-row gap-4 md:gap-8">
-      <li><a href="#about" class="text-white font-semibold hover:text-teal-200 transition">About</a></li>
-      <li><a href="#skills" class="text-white font-semibold hover:text-teal-200 transition">Skills</a></li>
-      <li><a href="#experience" class="text-white font-semibold hover:text-teal-200 transition">Experience</a></li>
-      <li><a href="#projects" class="text-white font-semibold hover:text-teal-200 transition">Projects</a></li>
-      <li><a href="#certifications" class="text-white font-semibold hover:text-teal-200 transition">Certifications</a></li>
-      <li><a href="#contact" class="text-white font-semibold hover:text-teal-200 transition">Contact</a></li>
+      <li><a href="#about" class="text-white font-semibold hover:text-blue-200 transition">About</a></li>
+      <li><a href="#skills" class="text-white font-semibold hover:text-blue-200 transition">Skills</a></li>
+      <li><a href="#experience" class="text-white font-semibold hover:text-blue-200 transition">Experience</a></li>
+      <li><a href="#projects" class="text-white font-semibold hover:text-blue-200 transition">Projects</a></li>
+      <li><a href="#certifications" class="text-white font-semibold hover:text-blue-200 transition">Certifications</a></li>
+      <li><a href="#contact" class="text-white font-semibold hover:text-blue-200 transition">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Header -->
-  <header class="relative text-center py-16 px-4 text-white">
-    <div class="particle-bg">
-      <div class="particle w-2 h-2" style="left: 10%; animation-delay: 0s;"></div>
-      <div class="particle w-3 h-3" style="left: 30%; animation-delay: 2s;"></div>
-      <div class="particle w-2 h-2" style="left: 50%; animation-delay: 4s;"></div>
-      <div class="particle w-3 h-3" style="left: 70%; animation-delay: 6s;"></div>
-      <div class="particle w-2 h-2" style="left: 90%; animation-delay: 8s;"></div>
+  <!-- Hero Section -->
+  <header class="relative text-center py-20 px-4 text-white">
+    <div class="hero-bg">
+      <div class="particle w-2 h-2" style="left: 15%; animation-delay: 0s;"></div>
+      <div class="particle w-3 h-3" style="left: 35%; animation-delay: 2s;"></div>
+      <div class="particle w-2 h-2" style="left: 55%; animation-delay: 4s;"></div>
+      <div class="particle w-3 h-3" style="left: 75%; animation-delay: 6s;"></div>
+      <div class="particle w-2 h-2" style="left: 95%; animation-delay: 8s;"></div>
     </div>
-    <img src="https://github.com/HarshaRaut04/Portfolio/blob/main/Mypic2%20(2).jpg?raw=true" alt="Harsha Raut Photo" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white mx-auto mb-4 animate-fadeIn" />
-    <h1 class="text-3xl md:text-4xl font-bold">Harsha Raut</h1>
-    <h2 class="text-lg md:text-xl font-semibold text-yellow-300 mt-2">Middleware Administrator | DevOps Enthusiast | Automation Expert</h2>
+    <img src="https://github.com/HarshaRaut04/Portfolio/blob/main/Mypic2%20(2).jpg?raw=true" alt="Harsha Raut Photo" class="w-36 h-36 md:w-48 md:h-48 rounded-full border-4 border-white mx-auto mb-6 shadow-lg animate-pulse" />
+    <h1 class="text-4xl md:text-5xl font-extrabold gradient-text">Harsha Raut</h1>
+    <h2 class="text-xl md:text-2xl font-semibold text-blue-100 mt-3">Middleware Administrator | DevOps Specialist | Automation Architect</h2>
+    <a href="#contact" class="mt-6 inline-block bg-blue-500 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-600 transition">Get in Touch</a>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="max-w-5xl mx-auto py-12 px-4 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-teal-600 text-center mb-8">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I am a highly skilled Middleware Administrator with over 10 years of experience specializing in Oracle WebLogic Server, Linux systems, and DevOps automation. My expertise spans installation, configuration, performance tuning, troubleshooting, patch management, security hardening, and disaster recovery. I have hands-on experience supporting high-availability distributed systems and middleware infrastructure for large-scale enterprises. I am also proficient in automation scripting with Bash and Python, contributing to continuous integration and deployment pipelines.
-    </p>
-    <p class="text-lg leading-relaxed mt-4">
-      I have collaborated on RPA (Robotic Process Automation) projects, contributing to testing automation and integration, ensuring seamless middleware functionality within business workflows. I am passionate about optimizing infrastructure for maximum uptime and performance while driving innovation through automation and modern DevOps practices.
-    </p>
+  <section id="about" class="max-w-6xl mx-auto py-16 px-6 fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-blue-900">About Me</h2>
+    <div class="section-divider"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      <div class="card bg-white p-8 rounded-xl shadow-lg">
+        <p class="text-lg leading-relaxed text-gray-700">
+          With over a decade of expertise as a Middleware Administrator, I specialize in Oracle WebLogic Server, Linux systems, and cutting-edge DevOps practices. My proficiency includes installation, configuration, performance optimization, troubleshooting, security hardening, and disaster recovery for high-availability enterprise systems.
+        </p>
+      </div>
+      <div class="card bg-white p-8 rounded-xl shadow-lg">
+        <p class="text-lg leading-relaxed text-gray-700">
+          I have driven automation initiatives using Bash and Python, reducing manual processes by up to 40% and enhancing CI/CD pipelines. My contributions to Robotic Process Automation (RPA) projects ensure seamless middleware integration, while my passion for innovation fuels optimized, scalable infrastructure solutions.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="max-w-5xl mx-auto py-12 px-4 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-teal-600 text-center mb-8">Skills</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">Oracle WebLogic Server Administration</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">Middleware Installation & Configuration</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">Performance Tuning & Troubleshooting</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">Patch Management & Security Hardening</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">High Availability & Disaster Recovery</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">Bash & Python Scripting for Automation</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">Linux System Administration</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">Apache, Nginx & Tomcat Configuration</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">DevOps Practices & CI/CD Integration</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">Monitoring & Observability Tools (AppDynamics, Plunk)</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">RPA Project Testing & Automation Support</div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">Cross-team Collaboration & Mentoring</div>
+  <section id="skills" class="max-w-6xl mx-auto py-16 px-6 fade-in bg-gray-100">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-blue-900">Technical Expertise</h2>
+    <div class="section-divider"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+      <div class="card bg-white p-6 rounded-xl shadow-lg text-center">
+        <i class="fas fa-server text-blue-500 text-2xl mb-3"></i>
+        <p class="font-semibold">Oracle WebLogic Administration</p>
+      </div>
+      <div class="card bg-white p-6 rounded-xl shadow-lg text-center">
+        <i class="fas fa-code text-blue-500 text-2xl mb-3"></i>
+        <p class="font-semibold">Bash & Python Automation</p>
+      </div>
+      <div class="card bg-white p-6 rounded-xl shadow-lg text-center">
+        <i class="fas fa-cogs text-blue-500 text-2xl mb-3"></i>
+        <p class="font-semibold">Performance Tuning</p>
+      </div>
+      <div class="card bg-white p-6 rounded-xl shadow-lg text-center">
+        <i class="fas fa-shield-alt text-blue-500 text-2xl mb-3"></i>
+        <p class="font-semibold">Security Hardening</p>
+      </div>
+      <div class="card bg-white p-6 rounded-xl shadow-lg text-center">
+        <i class="fas fa-server text-blue-500 text-2xl mb-3"></i>
+        <p class="font-semibold">Linux System Administration</p>
+      </div>
+      <div class="card bg-white p-6 rounded-xl shadow-lg text-center">
+        <i class="fas fa-cloud text-blue-500 text-2xl mb-3"></i>
+        <p class="font-semibold">DevOps & CI/CD Pipelines</p>
+      </div>
+      <div class="card bg-white p-6 rounded-xl shadow-lg text-center">
+        <i class="fas fa-chart-line text-blue-500 text-2xl mb-3"></i>
+        <p class="font-semibold">Monitoring (AppDynamics, Splunk)</p>
+      </div>
+      <div class="card bg-white p-6 rounded-xl shadow-lg text-center">
+        <i class="fas fa-robot text-blue-500 text-2xl mb-3"></i>
+        <p class="font-semibold">RPA Testing & Integration</p>
+      </div>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="max-w-5xl mx-auto py-12 px-4 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-teal-600 text-center mb-8">Experience</h2>
-    <div class="space-y-6">
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-teal-700">Manager - Reliance Jio Infocomm Ltd.</h3>
+  <section id="experience" class="max-w-6xl mx-auto py-16 px-6 fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-blue-900">Professional Experience</h2>
+    <div class="section-divider"></div>
+    <div class="space-y-8 mt-8">
+      <div class="card bg-white p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold text-blue-700">Manager - Reliance Jio Infocomm Ltd.</h3>
         <p class="text-gray-600">Sep 2022 – Present</p>
-        <ul class="list-disc pl-5 mt-2">
-          <li>Lead middleware operations and infrastructure management for Oracle WebLogic environments supporting critical telecom applications.</li>
-          <li>Implemented performance tuning and proactive monitoring to maintain 99.99% uptime.</li>
-          <li>Developed automation scripts using Bash to reduce manual interventions by 40%, enhancing deployment speed and accuracy.</li>
-          <li>Conducted root cause analysis and resolved complex middleware and server issues ensuring minimal business impact.</li>
-          <li>Managed SSL certificate lifecycle, including renewals and troubleshooting for secure communications.</li>
-          <li>Collaborated with DevOps and security teams to integrate monitoring tools like AppDynamics and Plunk for real-time observability.</li>
-          <li>Guided and mentored junior team members and cross-functional teams to enhance operational efficiency.</li>
-          <li>Supported RPA project testing by providing middleware environment stability and automation assistance.</li>
+        <ul class="list-disc pl-6 mt-3 text-gray-700">
+          <li>Orchestrated middleware operations for Oracle WebLogic, ensuring 99.99% uptime for critical telecom applications.</li>
+          <li>Developed automation scripts in Bash, reducing manual tasks by 40% and accelerating deployments.</li>
+          <li>Led root cause analysis and resolved complex issues, minimizing business impact.</li>
+          <li>Integrated AppDynamics and Splunk for real-time observability and proactive monitoring.</li>
+          <li>Mentored cross-functional teams, enhancing operational efficiency and knowledge sharing.</li>
+          <li>Supported RPA projects by stabilizing middleware environments and automating health checks.</li>
         </ul>
       </div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-teal-700">Senior Specialist - HCL Technologies</h3>
-        <p class="text-gray-600">Apr 2022 - Sep 2022</p>
-        <ul class="list-disc pl-5 mt-2">
-          <li>Provided expert support on Oracle WebLogic middleware infrastructure for multiple clients.</li>
-          <li>Developed and maintained automation scripts to streamline deployments, patching, and configuration management.</li>
-          <li>Integrated monitoring solutions to accelerate issue detection and resolution.</li>
-          <li>Collaborated with DevOps teams to improve CI/CD pipelines and automation frameworks.</li>
-          <li>Handled middleware troubleshooting, including thread dumps, heap analysis, and JVM tuning.</li>
-          <li>Participated in planning and executing migration and upgrade projects ensuring minimal downtime.</li>
+      <div class="card bg-white p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold text-blue-700">Senior Specialist - HCL Technologies</h3>
+        <p class="text-gray-600">Apr 2022 – Sep 2022</p>
+        <ul class="list-disc pl-6 mt-3 text-gray-700">
+          <li>Provided expert support for Oracle WebLogic infrastructure across multiple clients.</li>
+          <li>Streamlined deployments and patching through automation scripts.</li>
+          <li>Enhanced CI/CD pipelines, improving deployment efficiency.</li>
+          <li>Performed JVM tuning and thread dump analysis for optimal performance.</li>
         </ul>
       </div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-teal-700">Assistant Manager - Vodafone Intelligent Solutions
- </h3>
-        <p class="text-gray-600">Dec 2018 - Apr 2022</p>
-        <ul class="list-disc pl-5 mt-2">
-          <li>Managed middleware deployment and configuration for Oracle WebLogic and Apache servers.</li>
-          <li>Implemented performance tuning and log analysis to optimize server performance.</li>
-          <li>Automated routine operational tasks with scripting to improve reliability.</li>
-          <li>Supported production incidents, performing root cause analysis and coordinating fixes.</li>
-          <li>Ensured security compliance through patch management and configuration audits.</li>
+      <div class="card bg-white p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold text-blue-700">Assistant Manager - Vodafone Intelligent Solutions</h3>
+        <p class="text-gray-600">Dec 2018 – Apr 2022</p>
+        <ul class="list-disc pl-6 mt-3 text-gray-700">
+          <li>Managed WebLogic and Apache server deployments with a focus on performance tuning.</li>
+          <li>Automated operational tasks, improving system reliability.</li>
+          <li>Conducted security audits and patch management for compliance.</li>
         </ul>
       </div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-teal-700">Senior System Engineer - Cognizant Technology Solutions</h3>
-        <p class="text-gray-600">May 2015 - Dec 2018</p>
-        <ul class="list-disc pl-5 mt-2">
-          <li>Installed, configured, and maintained WebLogic middleware environments for large-scale enterprise applications.</li>
-          <li>Worked closely with developers and QA teams to support middleware needs for testing and production environments.</li>
-          <li>Monitored server health, managed SSL certificates, and maintained disaster recovery plans.</li>
-          <li>Participated in automation efforts using Shell scripting and configuration management tools.</li>
+      <div class="card bg-white p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold text-blue-700">Senior System Engineer - Cognizant Technology Solutions</h3>
+        <p class="text-gray-600">May 2015 – Dec 2018</p>
+        <ul class="list-disc pl-6 mt-3 text-gray-700">
+          <li>Configured and maintained WebLogic environments for enterprise applications.</li>
+          <li>Supported testing and production environments with middleware solutions.</li>
+          <li>Managed SSL certificates and disaster recovery plans.</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="max-w-5xl mx-auto py-12 px-4 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-teal-600 text-center mb-8">Projects</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-teal-700">RPA Middleware Automation Support</h3>
-        <p class="mt-2">Supported a Robotic Process Automation (RPA) project by ensuring middleware infrastructure stability and integrating automated testing workflows. Developed scripts to monitor and automate middleware health checks, enabling smooth execution of automated business processes.</p>
+  <section id="projects" class="max-w-6xl mx-auto py-16 px-6 fade-in bg-gray-100">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-blue-900">Key Projects</h2>
+    <div class="section-divider"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div class="card bg-white p-8 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-700">RPA Middleware Automation</h3>
+        <p class="mt-3 text-gray-700">Ensured middleware stability for RPA projects, developing scripts for automated health checks and seamless integration of business workflows.</p>
       </div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-teal-700">WebLogic Upgrade & Migration</h3>
-        <p class="mt-2">Led a successful upgrade of Oracle WebLogic Server from version 12.1.3 to 14c, involving environment setup, patching, and validation with zero downtime for critical applications.</p>
+      <div class="card bg-white p-8 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-700">WebLogic Upgrade & Migration</h3>
+        <p class="mt-3 text-gray-700">Led a zero-downtime upgrade of Oracle WebLogic from 12.1.3 to 14c, managing setup, patching, and validation.</p>
       </div>
-      <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-semibold text-teal-700">Middleware Performance Optimization</h3>
-        <p class="mt-2">Implemented advanced performance tuning techniques including JVM heap tuning, thread pool optimization, and connection pool management, resulting in 30% improved response times for key services.</p>
+      <div class="card bg-white p-8 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-700">Performance Optimization</h3>
+        <p class="mt-3 text-gray-700">Implemented JVM tuning and connection pool optimization, improving response times by 30% for critical services.</p>
       </div>
     </div>
   </section>
 
   <!-- Certifications Section -->
-  <section id="certifications" class="max-w-5xl mx-auto py-12 px-4 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-teal-600 text-center mb-8">Certifications</h2>
-    <div class="box bg-teal-100 p-6 rounded-lg shadow-lg">
-      <ul class="list-disc pl-5">
+  <section id="certifications" class="max-w-6xl mx-auto py-16 px-6 fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-blue-900">Certifications</h2>
+    <div class="section-divider"></div>
+    <div class="card bg-white p-8 rounded-xl shadow-lg mt-8">
+      <ul class="list-disc pl-6 text-gray-700">
         <li>Oracle WebLogic Server 12c Administrator Certified</li>
         <li>Red Hat Certified System Administrator (RHCSA)</li>
         <li>DevOps Foundation Certification</li>
@@ -203,21 +241,31 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="max-w-5xl mx-auto py-12 px-4 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-teal-600 text-center mb-8">Contact</h2>
-    <div class="box bg-teal-100 p-6 rounded-lg shadow-lg text-center">
-      <p class="text-lg">Email: <a href="mailto:harsharaut77@gmail.com" class="text-teal-600 hover:underline"><i class="fas fa-envelope mr-2"></i>harsharaut77@gmail.com</a></p>
-      <p class="text-lg mt-2">LinkedIn: <a href="https://www.linkedin.com/in/harrsharaut/" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:underline"><i class="fab fa-linkedin mr-2"></i>linkedin.com/in/harrsharaut</a></p>
+  <section id="contact" class="max-w-6xl mx-auto py-16 px-6 fade-in bg-gray-100">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-blue-900">Let's Connect</h2>
+    <div class="section-divider"></div>
+    <div class="card bg-white p-8 rounded-xl shadow-lg mt-8 text-center">
+      <p class="text-lg text-gray-700">
+        <i class="fas fa-envelope text-blue-500 mr-2"></i>
+        <a href="mailto:harsharaut77@gmail.com" class="text-blue-600 hover:underline">harsharaut77@gmail.com</a>
+      </p>
+      <p class="text-lg text-gray-700 mt-3">
+        <i class="fab fa-linkedin text-blue-500 mr-2"></i>
+        <a href="https://www.linkedin.com/in/harrsharaut/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">linkedin.com/in/harrsharaut</a>
+      </p>
+      <a href="https://github.com/HarshaRaut04" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block bg-blue-500 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-600 transition">
+        <i class="fab fa-github mr-2"></i>View GitHub
+      </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-teal-600 text-white text-center py-6">
-    © 2025 Harsha Raut. All rights reserved.
+  <footer class="bg-blue-900 text-white text-center py-8">
+    <p>© 2025 Harsha Raut. All rights reserved.</p>
   </footer>
 
   <script>
-    // Add scroll effect to nav
+    // Navigation scroll effect
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');
       nav.classList.toggle('scrolled', window.scrollY > 50);
@@ -231,9 +279,7 @@
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.2 });
 
     sections.forEach(section => observer.observe(section));
   </script>
-</body>
-</html>
