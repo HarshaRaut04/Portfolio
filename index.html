@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Harsha Raut - Middleware & DevOps Expert</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f7fa;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafb;
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
@@ -20,8 +20,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #2b2d42, #4a5e7c);
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
       z-index: -1;
     }
     .hero-bg::before {
@@ -31,157 +31,204 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/subtle-white-feathers.png');
-      opacity: 0.15;
+      background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      opacity: 0.1;
     }
     .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-radius: 12px;
     }
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     }
     nav {
-      transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+      transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
     }
     nav.scrolled {
-      background-color: rgba(43, 45, 66, 0.95);
-      backdrop-filter: blur(10px);
+      background-color: rgba(30, 58, 138, 0.95);
+      backdrop-filter: blur(12px);
     }
     .fade-in {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
     .section-divider {
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, #3b82f6, #1e90ff);
-      margin: 1rem auto;
-      border-radius: 2px;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      margin: 1.5rem auto;
+      border-radius: 3px;
     }
     .profile-img {
-      transition: transform 0.5s ease, opacity 0.5s ease;
+      transition: transform 0.6s ease, opacity 0.6s ease;
     }
     .profile-img.visible {
       opacity: 1;
       transform: scale(1);
     }
     .gradient-text {
-      background: linear-gradient(90deg, #3b82f6, #1e90ff);
+      background: linear-gradient(90deg, #60a5fa, #ffffff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.05em;
     }
     .social-icons a {
-      transition: color 0.3s ease, transform 0.3s ease;
+      transition: color 0.4s ease, transform 0.4s ease;
     }
     .social-icons a:hover {
-      color: #3b82f6;
-      transform: scale(1.2);
+      color: #60a5fa;
+      transform: scale(1.3);
+    }
+    .skill-icon {
+      transition: transform 0.3s ease;
+    }
+    .skill-icon:hover {
+      transform: scale(1.1);
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+    }
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 1.5rem;
+    }
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 16px;
+      height: 16px;
+      background: #3b82f6;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+    }
+    .timeline-item:nth-child(odd)::before {
+      right: -8px;
+    }
+    .timeline-item:nth-child(even)::before {
+      left: -8px;
     }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-50 text-gray-900">
   <!-- Navigation -->
-  <nav class="sticky top-0 z-50 py-4 px-6 md:px-16 flex justify-between items-center">
+  <nav class="sticky top-0 z-50 py-5 px-6 md:px-16 flex justify-between items-center">
     <h1 class="text-2xl md:text-3xl font-bold text-white">Harsha Raut</h1>
-    <ul class="flex flex-col md:flex-row gap-4 md:gap-8">
-      <li><a href="#about" class="text-white font-medium hover:text-blue-300 transition">About</a></li>
-      <li><a href="#skills" class="text-white font-medium hover:text-blue-300 transition">Skills</a></li>
-      <li><a href="#experience" class="text-white font-medium hover:text-blue-300 transition">Experience</a></li>
-      <li><a href="#projects" class="text-white font-medium hover:text-blue-300 transition">Projects</a></li>
-      <li><a href="#certifications" class="text-white font-medium hover:text-blue-300 transition">Certifications</a></li>
-      <li><a href="#contact" class="text-white font-medium hover:text-blue-300 transition">Contact</a></li>
+    <ul class="flex flex-col md:flex-row gap-5 md:gap-10">
+      <li><a href="#about" class="text-white font-medium hover:text-blue-200 transition">About</a></li>
+      <li><a href="#skills" class="text-white font-medium hover:text-blue-200 transition">Skills</a></li>
+      <li><a href="#experience" class="text-white font-medium hover:text-blue-200 transition">Experience</a></li>
+      <li><a href="#projects" class="text-white font-medium hover:text-blue-200 transition">Projects</a></li>
+      <li><a href="#certifications" class="text-white font-medium hover:text-blue-200 transition">Certifications</a></li>
+      <li><a href="#contact" class="text-white font-medium hover:text-blue-200 transition">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
-  <header class="relative text-center py-24 px-4 text-white">
+  <header class="relative text-center py-28 px-4 text-white">
     <div class="hero-bg"></div>
-    <img src="https://github.com/HarshaRaut04/Portfolio/blob/main/Mypic2%20(2).jpg?raw=true" alt="Harsha Raut Photo" class="w-36 h-36 md:w-48 md:h-48 rounded-full border-4 border-white mx-auto mb-6 shadow-lg opacity-0 transform scale-0 profile-img" />
-    <h1 class="text-4xl md:text-5xl font-bold gradient-text">Harsha Raut</h1>
-    <h2 class="text-xl md:text-2xl font-medium text-gray-200 mt-3 tracking-wide">Middleware Administrator | DevOps Specialist | Automation Expert</h2>
-    <a href="#contact" class="mt-6 inline-block bg-blue-600 text-white font-medium py-3 px-8 rounded-full hover:bg-blue-700 transition">Connect with Me</a>
-    <div class="social-icons mt-6 flex justify-center gap-6">
-      <a href="https://www.linkedin.com/in/harrsharaut/" target="_blank" rel="noopener noreferrer" class="text-gray-200">
-        <i class="fab fa-linkedin text-2xl"></i>
+    <img src="https://github.com/HarshaRaut04/Portfolio/blob/main/Mypic2%20(2).jpg?raw=true" alt="Harsha Raut Photo" class="w-40 h-40 md:w-52 md:h-52 rounded-full border-4 border-white mx-auto mb-6 shadow-xl opacity-0 transform scale-0 profile-img" />
+    <h1 class="text-5xl md:text-6xl font-bold gradient-text">Harsha Raut</h1>
+    <h2 class="text-2xl md:text-3xl font-medium text-gray-100 mt-4 tracking-wide">Middleware Administrator | DevOps Specialist | Automation Expert with 10+ Years of Experience</h2>
+    <a href="#contact" class="mt-8 inline-block bg-blue-500 text-white font-medium py-3 px-10 rounded-full hover:bg-blue-600 transition">Connect with Me</a>
+    <div class="social-icons mt-8 flex justify-center gap-8">
+      <a href="https://www.linkedin.com/in/harrsharaut/" target="_blank" rel="noopener noreferrer" class="text-gray-100">
+        <i class="fab fa-linkedin text-3xl"></i>
       </a>
-      <a href="https://github.com/HarshaRaut04" target="_blank" rel="noopener noreferrer" class="text-gray-200">
-        <i class="fab fa-github text-2xl"></i>
+      <a href="https://github.com/HarshaRaut04" target="_blank" rel="noopener noreferrer" class="text-gray-100">
+        <i class="fab fa-github text-3xl"></i>
       </a>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="max-w-6xl mx-auto py-16 px-6 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800">About Me</h2>
+  <section id="about" class="max-w-6xl mx-auto py-20 px-6 fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800">About Me</h2>
     <div class="section-divider"></div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-      <div class="card bg-white p-8 rounded-lg shadow-md">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+      <div class="card bg-white p-10 rounded-lg shadow-lg">
         <p class="text-lg leading-relaxed text-gray-600">
-          I am a seasoned Middleware Administrator with over 10 years of experience, specializing in Oracle WebLogic Server, Linux systems, and DevOps automation. My expertise includes installation, configuration, performance tuning, troubleshooting, security hardening, and disaster recovery for high-availability enterprise systems.
+          With over a decade of experience as a Middleware Administrator, I specialize in Oracle WebLogic Server, Linux systems, and DevOps automation. My expertise spans installation, configuration, performance tuning, troubleshooting, security hardening, and disaster recovery, ensuring high-availability for enterprise systems.
         </p>
       </div>
-      <div class="card bg-white p-8 rounded-lg shadow-md">
+      <div class="card bg-white p-10 rounded-lg shadow-lg">
         <p class="text-lg leading-relaxed text-gray-600">
-          I excel in automation scripting with Bash and Python, streamlining CI/CD pipelines and reducing manual processes by up to 40%. My work in Robotic Process Automation (RPA) projects ensures seamless middleware integration, and I am passionate about driving innovation through scalable infrastructure solutions.
+          I’m proficient in automation scripting with Bash and Python, optimizing CI/CD pipelines to reduce manual processes by up to 40%. My contributions to Robotic Process Automation (RPA) projects ensure seamless middleware integration, and I’m driven to deliver scalable, innovative infrastructure solutions.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="max-w-6xl mx-auto py-16 px-6 fade-in bg-gray-200">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Technical Expertise</h2>
+  <section id="skills" class="max-w-6xl mx-auto py-20 px-6 fade-in bg-gray-100">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800">Technical Expertise</h2>
     <div class="section-divider"></div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-      <div class="card bg-white p-6 rounded-lg shadow-md text-center">
-        <i class="fas fa-server text-blue-600 text-2xl mb-3"></i>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+      <div class="card bg-white p-8 rounded-lg shadow-lg text-center">
+        <i class="fas fa-server text-blue-500 text-3xl mb-4 skill-icon"></i>
         <p class="font-medium text-gray-700">Oracle WebLogic Administration</p>
       </div>
-      <div class="card bg-white p-6 rounded-lg shadow-md text-center">
-        <i class="fas fa-code text-blue-600 text-2xl mb-3"></i>
-        <p class="font-medium text-gray-700      <div class="card bg-white p-6 rounded-lg shadow-md text-center">
-        <i class="fas fa-cogs text-blue-600 text-2xl mb-3"></i>
-        <p class="font-medium text-gray-700">Performance Tuning</p>
+      <div class="card bg-white p-8 rounded-lg shadow-lg text-center">
+        <i class="fas fa-code text-blue-500 text-3xl mb-4 skill-icon"></i>
+        <p class="font-medium text-gray-700">Automation (Bash, Python)</p>
       </div>
-      <div class="card bg-white p-6 rounded-lg shadow-md text-center">
-        <i class="fas fa-shield-alt text-blue-600 text-2xl mb-3"></i>
-        <p class="font-medium text-gray-700">Security Hardening</p>
+      <div class="card bg-white p-8 rounded-lg shadow-lg text-center">
+        <i class="fas fa-cogs text-blue-500 text-3xl mb-4 skill-icon"></i>
+        <p class="font-medium text-gray-700">Performance Tuning & JVM Optimization</p>
       </div>
-      <div class="card bg-white p-6 rounded-lg shadow-md text-center">
-        <i class="fas fa-server text-blue-600 text-2xl mb-3"></i>
+      <div class="card bg-white p-8 rounded-lg shadow-lg text-center">
+        <i class="fas fa-shield-alt text-blue-500 text-3xl mb-4 skill-icon"></i>
+        <p class="font-medium text-gray-700">Security Hardening & Compliance</p>
+      </div>
+      <div class="card bg-white p-8 rounded-lg shadow-lg text-center">
+        <i class="fas fa-server text-blue-500 text-3xl mb-4 skill-icon"></i>
         <p class="font-medium text-gray-700">Linux System Administration</p>
       </div>
-      <div class="card bg-white p-6 rounded-lg shadow-md text-center">
-        <i class="fas fa-cloud text-blue-600 text-2xl mb-3"></i>
+      <div class="card bg-white p-8 rounded-lg shadow-lg text-center">
+        <i class="fas fa-cloud text-blue-500 text-3xl mb-4 skill-icon"></i>
         <p class="font-medium text-gray-700">DevOps & CI/CD Pipelines</p>
       </div>
-      <div class="card bg-white p-6 rounded-lg shadow-md text-center">
-        <i class="fas fa-chart-line text-blue-600 text-2xl mb-3"></i>
+      <div class="card bg-white p-8 rounded-lg shadow-lg text-center">
+        <i class="fas fa-chart-line text-blue-500 text-3xl mb-4 skill-icon"></i>
         <p class="font-medium text-gray-700">Monitoring (AppDynamics, Splunk)</p>
       </div>
-      <div class="card bg-white p-6 rounded-lg shadow-md text-center">
-        <i class="fas fa-robot text-blue-600 text-2xl mb-3"></i>
+      <div class="card bg-white p-8 rounded-lg shadow-lg text-center">
+        <i class="fas fa-robot text-blue-500 text-3xl mb-4 skill-icon"></i>
         <p class="font-medium text-gray-700">RPA Testing & Integration</p>
       </div>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="max-w-6xl mx-auto py-16 px-6 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Professional Experience</h2>
+  <section id="experience" class="max-w-6xl mx-auto py-20 px-6 fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800">Professional Experience</h2>
     <div class="section-divider"></div>
-    <div class="space-y-8 mt-8">
-      <div class="card bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-700">Manager - Reliance Jio Infocomm Ltd.</h3>
-        <p class="text-gray-600">Sep 2022 – Present</p>
-        <ul class="list-disc pl-6 mt-3 text-gray-600">
+    <div class="relative timeline mt-10">
+      <div class="timeline-item card bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-600">Manager - Reliance Jio Infocomm Ltd.</h3>
+        <p class="text-gray-500">Sep 2022 – Present</p>
+        <ul class="list-disc pl-6 mt-4 text-gray-600">
           <li>Orchestrated middleware operations for Oracle WebLogic, ensuring 99.99% uptime for critical telecom applications.</li>
           <li>Developed automation scripts in Bash, reducing manual tasks by 40% and accelerating deployments.</li>
           <li>Led root cause analysis and resolved complex issues, minimizing business impact.</li>
@@ -190,29 +237,29 @@
           <li>Supported RPA projects by stabilizing middleware environments and automating health checks.</li>
         </ul>
       </div>
-      <div class="card bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-700">Senior Specialist - HCL Technologies</h3>
-        <p class="text-gray-600">Apr 2022 – Sep 2022</p>
-        <ul class="list-disc pl-6 mt-3 text-gray-600">
+      <div class="timeline-item card bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-600">Senior Specialist - HCL Technologies</h3>
+        <p class="text-gray-500">Apr 2022 – Sep 2022</p>
+        <ul class="list-disc pl-6 mt-4 text-gray-600">
           <li>Provided expert support for Oracle WebLogic infrastructure across multiple clients.</li>
           <li>Streamlined deployments and patching through automation scripts.</li>
           <li>Enhanced CI/CD pipelines, improving deployment efficiency.</li>
           <li>Performed JVM tuning and thread dump analysis for optimal performance.</li>
         </ul>
       </div>
-      <div class="card bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-700">Assistant Manager - Vodafone Intelligent Solutions</h3>
-        <p class="text-gray-600">Dec 2018 – Apr 2022</p>
-        <ul class="list-disc pl-6 mt-3 text-gray-600">
+      <div class="timeline-item card bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-600">Assistant Manager - Vodafone Intelligent Solutions</h3>
+        <p class="text-gray-500">Dec 2018 – Apr 2022</p>
+        <ul class="list-disc pl-6 mt-4 text-gray-600">
           <li>Managed WebLogic and Apache server deployments with a focus on performance tuning.</li>
           <li>Automated operational tasks, improving system reliability.</li>
           <li>Conducted security audits and patch management for compliance.</li>
         </ul>
       </div>
-      <div class="card bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-700">Senior System Engineer - Cognizant Technology Solutions</h3>
-        <p class="text-gray-600">May 2015 – Dec 2018</p>
-        <ul class="list-disc pl-6 mt-3 text-gray-600">
+      <div class="timeline-item card bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-600">Senior System Engineer - Cognizant Technology Solutions</h3>
+        <p class="text-gray-500">May 2015 – Dec 2018</p>
+        <ul class="list-disc pl-6 mt-4 text-gray-600">
           <li>Configured and maintained WebLogic environments for enterprise applications.</li>
           <li>Supported testing and production environments with middleware solutions.</li>
           <li>Managed SSL certificates and disaster recovery plans.</li>
@@ -222,30 +269,30 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="max-w-6xl mx-auto py-16 px-6 fade-in bg-gray-200">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Key Projects</h2>
+  <section id="projects" class="max-w-6xl mx-auto py-20 px-6 fade-in bg-gray-100">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800">Key Projects</h2>
     <div class="section-divider"></div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      <div class="card bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-700">RPA Middleware Automation</h3>
-        <p class="mt-3 text-gray-600">Ensured middleware stability for RPA projects, developing scripts for automated health checks and seamless integration of business workflows.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+      <div class="card bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-600">RPA Middleware Automation</h3>
+        <p class="mt-4 text-gray-600">Ensured middleware stability for RPA projects, developing scripts for automated health checks and seamless integration of business workflows.</p>
       </div>
-      <div class="card bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-700">WebLogic Upgrade & Migration</h3>
-        <p class="mt-3 text-gray-600">Led a zero-downtime upgrade of Oracle WebLogic from 12.1.3 to 14c, managing setup, patching, and validation.</p>
+      <div class="card bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-600">WebLogic Upgrade & Migration</h3>
+        <p class="mt-4 text-gray-600">Led a zero-downtime upgrade of Oracle WebLogic from 12.1.3 to 14c, managing setup, patching, and validation.</p>
       </div>
-      <div class="card bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-blue-700">Performance Optimization</h3>
-        <p class="mt-3 text-gray-600">Implemented JVM tuning and connection pool optimization, improving response times by 30% for critical services.</p>
+      <div class="card bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-600">Performance Optimization</h3>
+        <p class="mt-4 text-gray-600">Implemented JVM tuning and connection pool optimization, improving response times by 30% for critical services.</p>
       </div>
     </div>
   </section>
 
   <!-- Certifications Section -->
-  <section id="certifications" class="max-w-6xl mx-auto py-16 px-6 fade-in">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Certifications</h2>
+  <section id="certifications" class="max-w-6xl mx-auto py-20 px-6 fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800">Certifications</h2>
     <div class="section-divider"></div>
-    <div class="card bg-white p-8 rounded-lg shadow-md mt-8">
+    <div class="card bg-white p-10 rounded-lg shadow-lg mt-10">
       <ul class="list-disc pl-6 text-gray-600">
         <li>Oracle WebLogic Server 12c Administrator Certified</li>
         <li>Red Hat Certified System Administrator (RHCSA)</li>
@@ -255,26 +302,26 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="max-w-6xl mx-auto py-16 px-6 fade-in bg-gray-200">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800">Let's Connect</h2>
+  <section id="contact" class="max-w-6xl mx-auto py-20 px-6 fade-in bg-gray-100">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800">Let's Connect</h2>
     <div class="section-divider"></div>
-    <div class="card bg-white p-8 rounded-lg shadow-md mt-8 text-center">
+    <div class="card bg-white p-10 rounded-lg shadow-lg mt-10 text-center">
       <p class="text-lg text-gray-600">
-        <i class="fas fa-envelope text-blue-600 mr-2"></i>
-        <a href="mailto:harsharaut77@gmail.com" class="text-blue-600 hover:underline">harsharaut77@gmail.com</a>
+        <i class="fas fa-envelope text-blue-500 mr-2"></i>
+        <a href="mailto:harsharaut77@gmail.com" class="text-blue-500 hover:underline">harsharaut77@gmail.com</a>
       </p>
-      <p class="text-lg text-gray-600 mt-3">
-        <i class="fab fa-linkedin text-blue-600 mr-2"></i>
-        <a href="https://www.linkedin.com/in/harrsharaut/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">linkedin.com/in/harrsharaut</a>
+      <p class="text-lg text-gray-600 mt-4">
+        <i class="fab fa-linkedin text-blue-500 mr-2"></i>
+        <a href="https://www.linkedin.com/in/harrsharaut/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">linkedin.com/in/harrsharaut</a>
       </p>
-      <a href="https://github.com/HarshaRaut04" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block bg-blue-600 text-white font-medium py-3 px-6 rounded-full hover:bg-blue-700 transition">
+      <a href="https://github.com/HarshaRaut04" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-blue-500 text-white font-medium py-3 px-8 rounded-full hover:bg-blue-600 transition">
         <i class="fab fa-github mr-2"></i>View GitHub
       </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-8">
+  <footer class="bg-gray-900 text-white text-center py-10">
     <p>© 2025 Harsha Raut. All rights reserved.</p>
   </footer>
 
@@ -293,7 +340,7 @@
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.2 });
 
     sections.forEach(section => observer.observe(section));
 
