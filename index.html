@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Harsha Raut - Infrastructure Middleware Administrator</title>
+  <title>Harsha Raut - Middleware Administrator</title>
   <style>
     :root {
-      --primary-color: #1e3a8a;
-      --secondary-color: #2563eb;
+      --primary-color: #256d85; /* Decent teal-ish color */
+      --secondary-color: #3ca0a8;
       --bg-light: #f9f9f9;
-      --bg-box: #e0e7ff;
+      --bg-box: #d1e7e8;
       --text-color: #333;
       --white: #fff;
+      --highlight-color: #144d54;
     }
 
     body {
@@ -75,10 +76,17 @@
       animation: fadeIn 2s ease-in-out;
     }
 
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: 700;
+    }
+
     header h2 {
-      margin-top: 0;
-      font-size: 1.2em;
-      font-weight: 300;
+      margin-top: 5px;
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #ffe082; /* Highlight yellow */
     }
 
     section {
@@ -93,6 +101,7 @@
       color: var(--primary-color);
       margin-bottom: 20px;
       font-size: 2em;
+      font-weight: 700;
     }
 
     .grid-box {
@@ -106,11 +115,12 @@
       padding: 20px;
       border-radius: 10px;
       transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .box:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
     }
 
     .experience h3, .projects h3 {
@@ -124,11 +134,16 @@
       text-align: center;
       padding: 20px 10px;
       margin-top: 40px;
+      font-size: 0.9em;
     }
 
     a {
       color: var(--secondary-color);
       text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     @keyframes fadeIn {
@@ -166,27 +181,34 @@
   <header>
     <img src="https://via.placeholder.com/140" alt="Harsha Raut Photo" />
     <h1>Harsha Raut</h1>
-    <h2>Middleware Administrator | DevOps Enthusiast | Automation Expert</h2>
+    <h2><strong>Middleware Administrator | DevOps Enthusiast | Automation Expert</strong></h2>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a dedicated Middleware Administrator with over 10 years of experience specializing in Oracle WebLogic, DevOps practices, and automation scripting. Proficient in Bash, Nginx, and Apache configurations, I excel at optimizing infrastructure for reliability and scalability. My passion for continuous learning drives me to pursue certifications like CCNA and explore technologies such as OpenStack. I thrive in collaborative environments, delivering robust solutions for complex challenges.
+      I am a highly skilled Middleware Administrator with over 10 years of experience specializing in Oracle WebLogic Server, Linux systems, and DevOps automation. My expertise spans installation, configuration, performance tuning, troubleshooting, patch management, security hardening, and disaster recovery. I have hands-on experience supporting high-availability distributed systems and middleware infrastructure for large-scale enterprises. I am also proficient in automation scripting with Bash and Python, contributing to continuous integration and deployment pipelines.
+    </p>
+    <p>
+      I have collaborated on RPA (Robotic Process Automation) projects, contributing to testing automation and integration, ensuring seamless middleware functionality within business workflows. I am passionate about optimizing infrastructure for maximum uptime and performance while driving innovation through automation and modern DevOps practices.
     </p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
     <div class="grid-box">
-      <div class="box">Oracle WebLogic Administration</div>
-      <div class="box">Bash Scripting</div>
-      <div class="box">Tomcat, Apache & Nginx Configuration</div>
-      <div class="box">DevOps Practices</div>
-      <div class="box">Automation & CI/CD</div>
-      <div class="box">OpenStack Fundamentals</div>
+      <div class="box">Oracle WebLogic Server Administration</div>
+      <div class="box">Middleware Installation & Configuration</div>
+      <div class="box">Performance Tuning & Troubleshooting</div>
+      <div class="box">Patch Management & Security Hardening</div>
+      <div class="box">High Availability & Disaster Recovery</div>
+      <div class="box">Bash & Python Scripting for Automation</div>
       <div class="box">Linux System Administration</div>
-      <div class="box">Network Configuration (CCNA in progress)</div>
+      <div class="box">Apache, Nginx & Tomcat Configuration</div>
+      <div class="box">DevOps Practices & CI/CD Integration</div>
+      <div class="box">Monitoring & Observability Tools (AppDynamics, Plunk)</div>
+      <div class="box">RPA Project Testing & Automation Support</div>
+      <div class="box">Cross-team Collaboration & Mentoring</div>
     </div>
   </section>
 
@@ -195,39 +217,49 @@
     <div class="experience">
       <div class="box">
         <h3>Manager - Reliance Jio Infocomm Ltd.</h3>
-        <p>Apr 2022 – Present</p>
+        <p>Sep 2022 – Present</p>
         <ul>
-          <li>Manage and optimize Oracle WebLogic servers, ensuring high availability and performance.</li>
-          <li>Automated configuration updates with Bash, reducing manual effort by 40%.</li>
-          <li>Enhanced Nginx setups to resolve HTTP 413 and related performance issues.</li>
-          <li>Collaborated cross-functionally for DevOps and monitoring improvements.</li>
+          <li>Lead middleware operations and infrastructure management for Oracle WebLogic environments supporting critical telecom applications.</li>
+          <li>Implemented performance tuning and proactive monitoring to maintain 99.99% uptime.</li>
+          <li>Developed automation scripts using Bash to reduce manual interventions by 40%, enhancing deployment speed and accuracy.</li>
+          <li>Conducted root cause analysis and resolved complex middleware and server issues ensuring minimal business impact.</li>
+          <li>Managed SSL certificate lifecycle, including renewals and troubleshooting for secure communications.</li>
+          <li>Collaborated with DevOps and security teams to integrate monitoring tools like AppDynamics and Plunk for real-time observability.</li>
+          <li>Guided and mentored junior team members and cross-functional teams to enhance operational efficiency.</li>
+          <li>Supported RPA project testing by providing middleware environment stability and automation assistance.</li>
         </ul>
       </div>
       <div class="box">
         <h3>Senior Specialist - HCL Technologies</h3>
         <p>Apr 2022 - Sep 2022</p>
         <ul>
-          <li>Supported WebLogic infrastructure with proactive tuning and patching strategies.</li>
-          <li>Wrote automation scripts to streamline routine deployment and maintenance tasks.</li>
-          <li>Integrated monitoring tools for faster issue detection and resolution.</li>
+          <li>Provided expert support on Oracle WebLogic middleware infrastructure for multiple clients.</li>
+          <li>Developed and maintained automation scripts to streamline deployments, patching, and configuration management.</li>
+          <li>Integrated monitoring solutions to accelerate issue detection and resolution.</li>
+          <li>Collaborated with DevOps teams to improve CI/CD pipelines and automation frameworks.</li>
+          <li>Handled middleware troubleshooting, including thread dumps, heap analysis, and JVM tuning.</li>
+          <li>Participated in planning and executing migration and upgrade projects ensuring minimal downtime.</li>
         </ul>
       </div>
       <div class="box">
         <h3>Assistant Manager - Vodafone India Services Pvt. Ltd.</h3>
         <p>Dec 2018 - Apr 2022</p>
         <ul>
-          <li>Supported Linux systems and middleware deployment activities.</li>
-          <li>Wrote automation scripts for repetitive tasks.</li>
-          <li>Contributed to log analysis and server tuning.</li>
+          <li>Managed middleware deployment and configuration for Oracle WebLogic and Apache servers.</li>
+          <li>Implemented performance tuning and log analysis to optimize server performance.</li>
+          <li>Automated routine operational tasks with scripting to improve reliability.</li>
+          <li>Supported production incidents, performing root cause analysis and coordinating fixes.</li>
+          <li>Ensured security compliance through patch management and configuration audits.</li>
         </ul>
       </div>
       <div class="box">
-        <h3>Middleware Administrator - Cognizant Technology Solutions</h3>
+        <h3>Senior System Engineer - Cognizant Technology Solutions</h3>
         <p>May 2015 - Dec 2018 </p>
         <ul>
-          <li>Maintained and supported Oracle WebLogic and Apache-based environments.</li>
-          <li>Performed performance tuning and patch management for middleware components.</li>
-          <li>Assisted in planning and execution of migration projects and production support.</li>
+          <li>Installed, configured, and maintained WebLogic middleware environments for large-scale enterprise applications.</li>
+          <li>Worked closely with developers and QA teams to support middleware needs for testing and production environments.</li>
+          <li>Monitored server health, managed SSL certificates, and maintained disaster recovery plans.</li>
+          <li>Participated in automation efforts using Shell scripting and configuration management tools.</li>
         </ul>
       </div>
     </div>
@@ -235,43 +267,44 @@
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="grid-box">
+    <div class="projects">
       <div class="box">
-        <h3>Apache MPM Configuration Script</h3>
-        <p>Bash script to detect and fix MPM issues across environments, ensuring proper threading and scaling.</p>
+        <h3>RPA Middleware Automation Support</h3>
+        <p>Supported a Robotic Process Automation (RPA) project by ensuring middleware infrastructure stability and integrating automated testing workflows. Developed scripts to monitor and automate middleware health checks, enabling smooth execution of automated business processes.</p>
       </div>
       <div class="box">
-        <h3>Nginx Worker Connections Automation</h3>
-        <p>Scripted automation to optimize `worker_connections` and `client_max_body_size` values dynamically.</p>
+        <h3>WebLogic Upgrade & Migration</h3>
+        <p>Led a successful upgrade of Oracle WebLogic Server from version 12.1.3 to 14c, involving environment setup, patching, and validation with zero downtime for critical applications.</p>
       </div>
       <div class="box">
-        <h3>OpenStack Exploration</h3>
-        <p>Built lab environment to explore OpenStack modules like Neutron, Nova, and Horizon.</p>
+        <h3>Middleware Performance Optimization</h3>
+        <p>Implemented advanced performance tuning techniques including JVM heap tuning, thread pool optimization, and connection pool management, resulting in 30% improved response times for key services.</p>
       </div>
     </div>
   </section>
 
   <section id="certifications">
     <h2>Certifications</h2>
-    <div class="grid-box">
-      <div class="box">Oracle WebLogic Server Certified Administrator</div>
-      <div class="box">Red Hat Certified System Administrator (RHCSA)</div>
-      <div class="box">CCNA (In Progress)</div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="grid-box">
+    <div class="certifications">
       <div class="box">
-        <strong>Email:</strong> <a href="mailto:harsha.raut@outlook.com">harsha.raut@outlook.com</a><br>
-        <strong>Location:</strong> Pune, India
+    <ul>
+      <li>Oracle WebLogic Server 12c Administrator Certified</li>
+      <li>Red Hat Certified System Administrator (RHCSA)</li>
+      <li>DevOps Foundation Certification</li>
+    </ul>
       </div>
-    </div>
+  </section>
+ <section id="contact">
+    <h2>Contact</h2>
+    <div class="experience">
+      <div class="box">
+    <p>Email: <a href="mailto:harsharaut77@gmail.com">harsharaut77@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/harrsharaut/" target="_blank" rel="noopener noreferrer">linkedin.com/in/harrsharaut</a></p>
+        </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Harsha Raut | Email: <a href="mailto:harsha.raut@outlook.com">harsha.raut@outlook.com</a> | Location: Pune, India</p>
+    &copy; 2025 Harsha Raut. All rights reserved.
   </footer>
 
 </body>
